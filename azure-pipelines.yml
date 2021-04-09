@@ -18,19 +18,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: TerraformTaskV1@0 
+- task: TerraformTaskV1@0
   inputs:
-    provider: 'azurerm'
+    provider: 'gcp'
     command: 'init'
-    workingDirectory: 'StorageAccount-Terraform'
-    backendServiceArm: 'your_subscription'
-    backendAzureRmResourceGroupName: 'your_resource_group_name'
-    backendAzureRmStorageAccountName: 'your_storage_account_name'
-    backendAzureRmContainerName: 'your_container_name'
-    backendAzureRmKey: 'tf/terraform.tfstate'
-- task: TerraformTaskV1@0 
-  inputs:
-    provider: 'azurerm'
-    command: 'apply'
-    workingDirectory: 'StorageAccount-Terraform'
-    environmentServiceNameAzureRM: 'your_subscription'
+    backendServiceGCP: 'GCPTerraformConnection'
