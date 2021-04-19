@@ -10,8 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
-
 - task: TerraformTaskV1@0
   inputs:
     provider: 'gcp'
