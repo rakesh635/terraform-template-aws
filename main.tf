@@ -12,17 +12,17 @@ terraform {
   #required_version = "~> 0.14"
 
   backend "remote" {
-    organization = "REPLACE_ME"
+    organization = "rakesh635testorg1"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "terraform-template-aws"
     }
   }
 }
 
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-2"
 }
 
 
