@@ -15,7 +15,7 @@ terraform {
     organization = "rakesh635testorg1"
 
     workspaces {
-      name = "terraform-template-aws"
+      name = "terraform-template-awss"
     }
   }
 }
